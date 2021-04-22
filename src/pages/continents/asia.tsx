@@ -1,4 +1,5 @@
-import { Box, Flex, Image, Text, SimpleGrid } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, SimpleGrid, Tooltip, Icon } from '@chakra-ui/react';
+import { RiInformationLine } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 
 export default function Asia() {
@@ -41,7 +42,12 @@ export default function Asia() {
 						</Box>
 						<Box m="10" align="center">
 							<Text color="orange.400" fontSize="4xl" fontWeight="bold">27</Text>
-							<Text color="gray.600" fontWeight="bold">cidades +100</Text>
+							<Text color="gray.600" fontWeight="bold">
+								cidades +100
+								<Tooltip label="27 cidades" aria-label="A tooltip">
+									<Icon h="6" w="6" mx="1" mt="1"><RiInformationLine /></Icon>
+								</Tooltip>
+							</Text>
 						</Box>
 					</Flex>
 				</Flex>

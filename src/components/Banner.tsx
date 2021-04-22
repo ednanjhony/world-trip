@@ -1,4 +1,7 @@
-import { Image } from '@chakra-ui/react'
+import { Image, Box } from '@chakra-ui/react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
+import 'swiper/swiper-bundle.css';
 
 export function Banner() {
 	return (
