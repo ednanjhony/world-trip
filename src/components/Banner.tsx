@@ -1,10 +1,20 @@
-import { Image, Box } from '@chakra-ui/react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
-import 'swiper/swiper-bundle.css';
+import { Image, useBreakpointValue } from '@chakra-ui/react'
+
 
 export function Banner() {
+	const isMobile = useBreakpointValue({
+		base: true,
+		lg: false,
+		md: false,
+	})
+
+	if (isMobile) {
+		return (
+			<Image src="../../assets/Bannersm.png" alt="Banner" display="block" w="100%" h={[163, 250]} mx="auto" objectFit="cover" />
+		)
+	}
+
 	return (
-		<Image src="../../assets/Banner.png" alt="Banner" w={1440} h={368} objectFit="cover" />
+		<Image src="../../assets/Banner.png" alt="Banner" display="block" w="100%" h={[163, 250, 368]} mx="auto" objectFit="cover" />
 	);
 }

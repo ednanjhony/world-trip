@@ -1,11 +1,19 @@
-import { Box, Flex, Image, Text, SimpleGrid, Tooltip, Icon } from '@chakra-ui/react';
-import { RiInformationLine } from 'react-icons/ri';
+import { Box, Flex, Image, Text, SimpleGrid, Tooltip, Icon, Link } from '@chakra-ui/react';
+import { RiArrowLeftLine, RiInformationLine } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 
 export default function Oceania() {
 	return (
 		<Box>
-			<Header />
+			<Flex>
+				<Link href="/" textDecoration="none">
+					<Icon justify="left" mt={[5, 10]} mx={[2, 5]} w={[5, 8]} h={[5, 8]}>
+						<RiArrowLeftLine />
+					</Icon>
+				</Link>
+				<Header />
+
+			</Flex>
 
 			<Flex 
 				w="100%"
@@ -13,34 +21,53 @@ export default function Oceania() {
 				mx="auto"
 				flexDir="column"
 			>
-				<Image 
-					src="../../assets/oceania/banner.jpeg" 
-					alt="oceania" 
-					w={1440} 
-					h={500} 
-					objectFit="cover"
-					mx="auto" 
-				/>
+				<Flex
+					justifyContent="center"
+					alignItems="center"
+					w="100%"
+					h={[150, 300, 500]}
+				>
+					<Image 
+						src="../../assets/oceania/banner.jpeg" 
+						alt="oceania" 
+						w="100%" 
+						h={[150, 300, 500]}
+						objectFit="cover"
+						mx="auto"
+						position="absolute" 
+					/>
+					<Text fontSize="4xl" color="white" fontWeight="bold" position="absolute">Oceania</Text>
+				</Flex>
 
-				<Flex flexDir="row" justify="space-between" maxW={1440}>
-					<Box maxWidth={600} p={["4", "6"]} m="10">
-						<Text color="gray.600">
-							A Europa é, por convenção, um dos seis continentes do mundo.
-							Compreendo a península acidental da Eurásiam a Europa geralmente
-							dividi-se da Ásia a leste pela divisória de águas dos montes Urais,
-							o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+				<Flex flexDir={['column', 'column', 'column', 'row']} justify={{ sm: "center", md: "center", lg: "space-between"  }} maxW={1440} mx="auto">
+					<Box maxWidth={600} p={["1", "4", "6"]} mx="auto">
+						<Text color="gray.600" my="5">
+							here are many variations of passages of Lorem Ipsum available,
+							but the majority have suffered alteration in some form,
+							by injected humour,
+							or randomised words which don't look even slightly believable.
+							If you are going to use a passage of Lorem Ipsum,
+							you need to be sure there isn't anything embarrassing hidden in the middle of text.
+							All the Lorem Ipsum generators on the Internet
+							tend to repeat predefined chunks as necessary,
+							making this the first true generator on the Internet.
+							It uses a dictionary of over 200 Latin words,
+							combined with a handful of model sentence structures,
+							to generate Lorem Ipsum which looks reasonable.
+							The generated Lorem Ipsum is therefore always free from repetition,
+							injected humour, or non-characteristic words etc.
 						</Text>
 					</Box>
-					<Flex maxWidth={600} p={["4", "6"]}>
-						<Box m="10" align="center">
+					<Flex maxWidth={600} p={["1", "4", "6"]} justify="center">
+						<Box mx={[3, 5, 7]} align="center">
 							<Text color="orange.400" fontSize="4xl" fontWeight="bold">50</Text>
 							<Text color="gray.600" fontWeight="bold">países</Text>
 						</Box>
-						<Box m="10" align="center">
+						<Box mx={[3, 5, 7]} align="center">
 							<Text color="orange.400" fontSize="4xl" fontWeight="bold">60</Text>
 							<Text color="gray.600" fontWeight="bold">línguas</Text>
 						</Box>
-						<Box m="10" align="center">
+						<Box mx={[3, 5, 7]} align="center">
 							<Text color="orange.400" fontSize="4xl" fontWeight="bold">27</Text>
 							<Text color="gray.600" fontWeight="bold">
 								cidades +100
@@ -56,31 +83,76 @@ export default function Oceania() {
 					Cidades +100
 				</Text>
 
-				<SimpleGrid columns={[1, 3, 4 ]} spacing="10" ml="10">
-					<Box h="250">
-						<Image src="../../../assets/oceania/australia.jpeg" alt="Sydney" w="100%" h="130" />
+				<SimpleGrid columns={[1, 2, 3, 4 ]} spacing="12" px="10" w="100%">
+					<Box w="200" h="250" mx="auto" my="10">
+						<Image src="../../../assets/oceania/australia.jpeg" alt="Sydney" w="100%" h="173" />
 						<Text color="gray.800" fontWeight="bold" m="3">Sydney</Text>
-						<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Austrália</Text>
+						<Flex justify="space-between">
+							<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Austrália</Text>
+							<Image 
+								src="https://www.estudopratico.com.br/wp-content/uploads/2017/03/significado-da-bandeira-da-australia.jpg" 
+								w="8"
+								h="8"
+								borderRadius="50%"
+								mx="5"
+							/>
+						</Flex>
 					</Box>
-					<Box h="279px">
-						<Image src="../../../assets/oceania/novaZelandia.jpeg" alt="Auckland" w="100%" h="130" />
+					<Box w="200" h="250" mx="auto" my="10">
+						<Image src="../../../assets/oceania/novaZelandia.jpeg" alt="Auckland" w="100%" h="173" />
 						<Text color="gray.800" fontWeight="bold" m="3">Auckland</Text>
-						<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Nova Zelândia</Text>
+						<Flex justify="space-between">
+							<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Nova Zelândia</Text>
+							<Image 
+								src="https://www.estudopratico.com.br/wp-content/uploads/2017/03/significado-da-bandeira-da-nova-zelandia-1200x675.jpg" 
+								w="8"
+								h="8"
+								borderRadius="50%"
+								mx="5"
+							/>
+						</Flex>
 					</Box>
-					<Box h="279px">
-						<Image src="../../../assets/oceania/fiji.jpeg" alt="Fiji" w="100%" h="130" />
+					<Box w="200" h="250" mx="auto" my="10">
+						<Image src="../../../assets/oceania/fiji.jpeg" alt="Fiji" w="100%" h="173" />
 						<Text color="gray.800" fontWeight="bold" m="3">Fiji</Text>
-						<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Fiji</Text>
+						<Flex justify="space-between">
+							<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Fiji</Text>
+							<Image 
+								src="https://www.estudopratico.com.br/wp-content/uploads/2017/04/significado-da-bandeira-fiji-1200x675.jpg" 
+								w="8"
+								h="8"
+								borderRadius="50%"
+								mx="5"
+							/>
+						</Flex>
 					</Box>
-					<Box h="279px">
-						<Image src="../../../assets/oceania/papua.jpeg" alt="Goroka" w="100%" h="130" />
+					<Box w="200" h="250" mx="auto" my="10">
+						<Image src="../../../assets/oceania/papua.jpeg" alt="Goroka" w="100%" h="173" />
 						<Text color="gray.800" fontWeight="bold" m="3">Goroka</Text>
-						<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Papua-Nova Guiné</Text>
+						<Flex justify="space-between">
+							<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Papua-Nova Guiné</Text>
+							<Image 
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/227px-Flag_of_Papua_New_Guinea.svg.png" 
+								w="8"
+								h="8"
+								borderRadius="50%"
+								mx="5"
+							/>
+						</Flex>
 					</Box>
-					<Box h="279px">
-						<Image src="../../../assets/oceania/micronesia.jpeg" alt="Weno" w="100%" h="130" />
+					<Box w="200" h="250" mx="auto" my="10">
+						<Image src="../../../assets/oceania/micronesia.jpeg" alt="Weno" w="100%" h="173" />
 						<Text color="gray.800" fontWeight="bold" m="3">Weno</Text>
-						<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Estados Ferados da Micronésia</Text>
+						<Flex justify="space-between">
+							<Text color="gray.400" fontSize="sm" fontWeight="bold" m="3">Estados Ferados da Micronésia</Text>
+							<Image 
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/255px-Flag_of_the_Federated_States_of_Micronesia.svg.png" 
+								w="8"
+								h="8"
+								borderRadius="50%"
+								mx="5"
+							/>
+						</Flex>
 					</Box>
 				</SimpleGrid>
 			</Flex>
