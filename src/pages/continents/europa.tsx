@@ -39,7 +39,7 @@ export default function ContinentEuropa() {
 					<Text fontSize="4xl" color="white" fontWeight="bold" position="absolute">Europa</Text>
 				</Flex>
 
-				<Flex flexDir={['column', 'column', 'column', 'row']} justify={{ sm: "center", md: "center", lg: "space-between"  }} maxW={1440} mx="auto">
+				<Flex flexDir={['column', 'column', 'column', 'row']} justify={{ sm: "center", md: "center", lg: "space-between"  }} alignItems="center" maxW={1440} mx="auto">
 					<Box maxWidth={600} p={["1", "4", "6"]} mx="auto">
 						<Text color="gray.600" my="5">
 							A Europa é, por convenção, um dos seis continentes do mundo.
